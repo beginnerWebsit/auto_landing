@@ -1,0 +1,83 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.process {
+    padding: 130px 0;
+
+    &__inner {
+        @include m.d-flex(space-between, start);
+
+        &-content {
+            @include m.d-flex(start, start, nowrap, column, 0, 40px);
+            margin: 0 15px 0 0;
+            max-width: 530px;
+
+            &-title {
+                @include m.font(58px, 800, v.$black, 1.31);
+                letter-spacing: -0.03em;
+            }
+
+            &-text {
+                @include m.font(16px, 600, v.$black, 1.75);
+                opacity: .6;
+            }
+        }
+
+        .plan {
+            max-width: 532px;
+
+            &__item {
+                @include m.d-flex(start, start, nowrap, row, 25px);
+                margin: 0 0 50px 0;
+
+                &-title {
+                    @include m.font(32px, 700, v.$black, 1.5);
+                    letter-spacing: -0.03em;
+                    margin: 0 0 10px 0;
+                }
+
+                &-desc {
+                    @include m.font(18px, 600, v.$black, 1.75);
+                    opacity: .6;
+                    height: 71px;
+
+                    &--1, &--2 {
+                        position: relative;
+                        
+                        &::before {
+                            content: "";
+                            display: block;
+                            border-left: 2px dashed v.$primary;
+                            height: 71px;
+                            @include m.position(absolute, -1, -1, top, left, 5px, -50px);
+                        }
+                    }
+                }
+
+                &--01::before {
+                    content: "";
+                    display: inblock;
+                    background: url("../assets/icons/circle-01.svg") 0 0 / 100% no-repeat;
+                    width: 72px;
+                    height: 72px;
+                }
+
+                &--02::before {
+                    content: "";
+                    display: block;
+                    background: url("../assets/icons/circle-02.svg") 0 0 / 100% no-repeat;
+                    width: 72px;
+                    height: 72px;
+                }
+
+                &--03::before {
+                    content: "";
+                    display: block;
+                    background: url("../assets/icons/circle-03.svg") 0 0 / 100% no-repeat;
+                    width: 72px;
+                    height: 72px;
+                }
+            }
+        }
+    }
+}

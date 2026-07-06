@@ -1,0 +1,63 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.offer {
+    padding: 130px 0;
+    background-color: v.$light-grey;
+
+    &__subtitle {
+        @include m.font(24px, 600, v.$black, 1.5);
+        text-align: center;
+        letter-spacing: -0.03em;
+        margin: 0 0 10px 0;
+    }
+
+    &__title {
+        @include m.font(58px, 800, v.$black, 1.31);
+        letter-spacing: -0.03em;
+        margin: 0 auto 80px auto;
+        text-align: center;
+        max-width: 850px;
+    }
+
+    &__list {
+        @include m.d-grid(repeat(2, 1fr) / repeat(4, 1fr), 8px, 8px);
+
+        &-item {
+            width: 316px;
+            height: 232px;
+            @include m.d-flex(center, center, nowrap, column, 0, 20px);
+            background-color: v.$white;
+            @include m.font(24px, 600, v.$black, 1.5);
+            transition: all .33s;
+
+            & path {
+                fill: v.$black;
+            }
+
+            &:hover {
+                background-color: v.$primary;
+                @include m.font(24px, 600, v.$white, 1.5);
+
+                & path {
+                    fill: v.$white;
+                }
+            }
+        }
+    }
+
+    &__about {
+        @include m.font(18px, 600, v.$black, 1.75);
+        @include m.d-flex(flex-end, center, nowrap, row, 16px);
+        margin: 30px 0 0 0;
+
+
+        &::after {
+            content: "";
+            display: block;
+            background: url("../assets/icons/arrow-right.svg");
+            width: 53px;
+            height: 15px;
+        }
+    }
+}
