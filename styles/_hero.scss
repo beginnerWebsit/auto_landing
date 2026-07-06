@@ -1,0 +1,110 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.hero {
+    padding: 80px 0 135px 0;
+
+    &__inner {
+        @include m.d-flex(space-between);
+
+        .hero__content {
+            @include m.d-flex(start, start, nowrap, column, 0, 50px);
+            max-width: 620px;
+
+            &-title {
+                @include m.font(64px, 800, v.$black, 1.31);
+                letter-spacing: -0.03em;
+            }
+
+            &-buttons {
+                @include m.d-flex(start, center, nowrap, row, 50px);
+
+                &-playvideo {
+                    @include m.d-flex(start, center, nowrap, row, 10px);
+                    padding: 0;
+                    transition: .33s;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url("../assets/icons/play.svg") 0 0 / 100% no-repeat;
+                        width: 31px;
+                        height: 31px;
+                    }
+
+                    &:hover {
+                        scale: 1.2;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &-worktime {
+                @include m.d-flex(start, center, nowrap, row, 15px);
+
+                &-wrapper {
+                    @include m.d-flex(start, start, nowrap, column);
+                }
+
+
+                & span {
+                    @include m.font(16px, 500, v.$grey, 1.5);
+                }
+
+                &-time {
+                    @include m.font(18px, 600, v.$black, 1.75);
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    background: url("../assets/icons/clock.svg") 0 0 / 100% no-repeat;
+                    width: 31px;
+                    height: 31px;
+                }
+            }
+        }
+
+        .hero__img {
+            position: relative;
+        }
+
+        .hero__info {
+            border: 12px solid rgba(225, 225, 225, 0.43);
+            border-radius: 59px;
+            box-shadow: 0 28px 118px 0 rgba(109, 108, 115, 0.12);
+            background: linear-gradient(174deg, #fff 0%, #fff 100%);
+
+            &-left {
+                @include m.position(absolute, 1, -1, top, left, 72px, -39px);
+                width: 281px;
+                height: 102px;
+                @include m.d-flex(center, center, nowrap, row, 15px);
+
+
+                &::before {
+                    content: "";
+                    display: block;
+                    background: url("../assets/icons/24h.svg");
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
+            &-right {
+                @include m.position(absolute, 1, -1, bottom, right, 72px, -39px);
+                width: 326px;
+                height: 102px;
+                @include m.d-flex(center, center, nowrap, row, 15px);
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background: url("../assets/icons/stars.svg");
+                    width: 185px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+}

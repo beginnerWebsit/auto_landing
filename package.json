@@ -1,0 +1,23 @@
+{
+  "name": "auto_landing",
+  "version": "1.0.0",
+  "description": "landing page",
+  "homepage": "https://github.com/beginnerWebsit/auto_landing#readme",
+  "bugs": {
+    "url": "https://github.com/beginnerWebsit/auto_landing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beginnerWebsit/auto_landing.git"
+  },
+  "license": "ISC",
+  "author": "qwe",
+  "type": "commonjs",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

@@ -1,0 +1,82 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.header {
+    height: 90px;
+
+    &__inner {
+        @include m.d-flex(space-between, center, nowrap, row);
+        height: 100%;
+
+        &-logo {
+            transform: translateY(-15px);
+            transition: .33s;
+
+            &:hover {
+                scale: 1.1;
+                cursor: pointer;
+            }
+        }
+
+        &-content {
+            @include m.d-flex(start, start);
+
+            .nav {
+                @include m.d-flex(start, start, nowrap, row, 60px);
+
+                &__list {
+                    @include m.d-flex(start, start, nowrap, row, 40px);
+
+                    &-item {
+                        @include m.font(16px, 600, v.$black, 1.75);
+                        transition: .33s;
+
+                        &:hover {
+                            opacity: .7;
+                            cursor: pointer;
+                        }
+
+                        &:last-child {
+                            content: "";
+                            padding: 0 30px 0 0;
+                            border-right: 1px solid rgba($color: v.$grey, $alpha: 0.36);
+                        }
+                    }
+                }
+            }
+
+            .contact {
+                padding: 0 0 0 30px;
+                @include m.d-flex(start, center, nowrap, row, 14px);
+                transform: translateY(-10px);
+
+                &__number {
+                    @include m.d-flex(start, start, nowrap, column, 0, 5px);
+
+                    & span {
+                        @include m.font(16px, 500, v.$black, 1.5);
+                        opacity: .7;
+                    }
+
+                    & a {
+                        @include m.font(18px, 600, v.$black, 1.75);
+                        transition: .33s;
+
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    background: url("../assets/icons/call.svg") 0 0 / 100% no-repeat;
+                    width: 40px;
+                    height: 40px;
+                }
+
+            }
+        }
+    }
+}
