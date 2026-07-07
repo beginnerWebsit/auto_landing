@@ -402,6 +402,7 @@ button {
   font-style: normal;
   color: #fff;
   line-height: 1.5;
+  cursor: pointer;
 }
 .offer__list-item:hover path {
   fill: #fff;
@@ -532,6 +533,62 @@ button {
   background: url("../assets/icons/circle-03.svg") 0 0/100% no-repeat;
   width: 72px;
   height: 72px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 0;
+  row-gap: 0;
+}
+.contact__img-mazda {
+  max-width: 976px;
+  position: relative;
+}
+.contact__img-mazda img {
+  max-width: 100%;
+  height: auto;
+}
+.contact__img-kusachki {
+  max-width: 944px;
+}
+.contact__img-kusachki img {
+  max-width: 100%;
+  height: auto;
+}
+.contact__content {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 318px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 50px;
+  background: #ff6433;
+  width: 730px;
+  height: 100%;
+}
+.contact__content-title {
+  font-size: 48px;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  line-height: 1.4;
+  max-width: 570px;
+  margin: 0 auto;
+}
+.contact__content-button {
+  background-color: #1e1b1b;
+  width: 177px;
+  height: 64px;
+  margin: 0 0 0 60px;
 }
 
 /*# sourceMappingURL=index.css.map */

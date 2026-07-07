@@ -1,0 +1,48 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+
+.contact {
+    @include m.d-flex(center, start);
+
+
+    &__img-mazda {
+        max-width: 976px;
+        position: relative;
+
+        & img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__img-kusachki {
+        max-width: 944px;
+
+        & img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        @include m.position(absolute, 999, -1, top, left, 0, 318px);
+        @include m.d-flex(center, start, nowrap, column, 0, 50px);
+        background: v.$primary;
+        width: 730px;
+        height: 100%;
+
+        &-title {
+            @include m.font(48px, 700, v.$white, 1.4);
+            max-width: 570px;
+            margin: 0 auto;
+        }
+
+        &-button {
+            background-color: v.$black;
+            width: 177px;
+            height: 64px;
+            margin: 0 0 0 60px;
+        }
+    }
+}

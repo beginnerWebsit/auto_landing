@@ -30,7 +30,7 @@
             background-color: v.$white;
             @include m.font(24px, 600, v.$black, 1.5);
             transition: all .33s;
-
+            
             & path {
                 fill: v.$black;
             }
@@ -38,6 +38,7 @@
             &:hover {
                 background-color: v.$primary;
                 @include m.font(24px, 600, v.$white, 1.5);
+                cursor: pointer;
 
                 & path {
                     fill: v.$white;
