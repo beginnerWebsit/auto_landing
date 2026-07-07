@@ -30,6 +30,7 @@
             background-color: v.$white;
             @include m.font(24px, 600, v.$black, 1.5);
             transition: all .33s;
+            user-select: none;
             
             & path {
                 fill: v.$black;
@@ -51,7 +52,8 @@
         @include m.font(18px, 600, v.$black, 1.75);
         @include m.d-flex(flex-end, center, nowrap, row, 16px);
         margin: 30px 0 0 0;
-
+        transition: .33s;
+        user-select: none;
 
         &::after {
             content: "";
@@ -59,6 +61,11 @@
             background: url("../assets/icons/arrow-right.svg");
             width: 53px;
             height: 15px;
+        }
+
+        &:hover {
+            opacity: .7;
+            cursor: pointer;
         }
     }
 }

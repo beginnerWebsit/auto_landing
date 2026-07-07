@@ -391,6 +391,7 @@ button {
   color: #1e1b1b;
   line-height: 1.5;
   transition: all 0.33s;
+  user-select: none;
 }
 .offer__list-item path {
   fill: #1e1b1b;
@@ -421,6 +422,8 @@ button {
   column-gap: 16px;
   row-gap: 0;
   margin: 30px 0 0 0;
+  transition: 0.33s;
+  user-select: none;
 }
 .offer__about::after {
   content: "";
@@ -428,6 +431,10 @@ button {
   background: url("../assets/icons/arrow-right.svg");
   width: 53px;
   height: 15px;
+}
+.offer__about:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .process {
@@ -573,6 +580,7 @@ button {
   row-gap: 50px;
   background: #ff6433;
   width: 730px;
+  max-height: 502px;
   height: 100%;
 }
 .contact__content-title {
@@ -589,6 +597,68 @@ button {
   width: 177px;
   height: 64px;
   margin: 0 0 0 60px;
+}
+
+.experience {
+  padding: 50px 0;
+}
+.experience__stats {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 185px;
+  row-gap: 0;
+}
+.experience__stats-item {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 0;
+  font-size: 58px;
+  font-weight: 800;
+  font-style: normal;
+  color: #661ce7;
+  line-height: 1.31;
+}
+.experience__stats-item span {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  color: #1e1b1b;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.brands {
+  padding: 130px 0 80px 0;
+  background-color: #e2e6e9;
+}
+.brands__title {
+  font-size: 58px;
+  font-weight: 800;
+  font-style: normal;
+  color: #1e1b1b;
+  line-height: 1.31;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+.brands__list {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(5, 1fr);
+  column-gap: 38px;
+  row-gap: 38px;
+}
+.brands__list-item {
+  transition: 0.33s;
+}
+.brands__list-item:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

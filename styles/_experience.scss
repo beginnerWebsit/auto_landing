@@ -1,0 +1,20 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.experience {
+    padding: 50px 0;
+
+    &__stats {
+        @include m.d-flex(center, start, nowrap, row, 185px);
+
+        &-item {
+            @include m.d-flex(start, start, nowrap, column);
+            @include m.font(58px, 800, v.$secondary, 1.31);
+
+            & span {
+                @include m.font(24px, 600, v.$black, 1.5);
+                opacity: .7;
+            }
+        }
+    }
+}

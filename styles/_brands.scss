@@ -1,0 +1,26 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.brands {
+    padding: 130px 0 80px 0;
+    background-color: v.$steelgrey;
+
+    &__title {
+        @include m.font(58px, 800, v.$black, 1.31);
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    &__list {
+        @include m.d-grid(repeat(2, 1fr) / repeat(5, 1fr), 38px, 38px);
+        
+        &-item {
+            transition: .33s;
+
+            &:hover {
+                opacity: .6;
+                cursor: pointer;
+            }
+        }
+    }
+}
