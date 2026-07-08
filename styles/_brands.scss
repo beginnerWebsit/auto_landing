@@ -12,9 +12,10 @@
     }
 
     &__list {
-        @include m.d-grid(repeat(2, 1fr) / repeat(5, 1fr), 38px, 38px);
+        @include m.d-grid(repeat(2, 1fr) / repeat(5, 1fr), 0, 38px);
         
         &-item {
+            max-width: 220px;
             transition: .33s;
 
             &:hover {

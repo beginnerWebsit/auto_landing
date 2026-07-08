@@ -1,0 +1,111 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.reviews {
+    background-color: v.$light-grey;
+    padding: 128px 0;
+
+
+    &__title {
+        @include m.font(58px, 800, v.$black, 1.31);
+        margin: 0 auto 75px auto;
+        max-width: 900px;
+        text-align: center;
+
+    }
+
+    &__slider {
+        @include m.d-flex(start, start, nowrap, row, 50px);
+        position: relative;
+        margin: 0 0 40px 0;
+
+        &-slide {
+            border: 1px solid rgba(172, 172, 172, 0.29);
+            border-radius: 6px;
+            width: 616px;
+            height: 376px;
+            box-shadow: 11px 130px 100px 30px rgba(0, 0, 0, 0.02);
+            background-color: v.$white;
+            padding: 70px;
+
+            &-info {
+                @include m.d-flex(start, center, nowrap, row, 16px);
+                margin: 0 0 25px 0;
+
+                &-name {
+                    @include m.font(24px, 600, v.$black, 1.5);
+                }
+
+                &-location {
+                    @include m.font(16px, 600, v.$grey, 1.75);
+                }
+            }
+
+            &-desc {
+                @include m.font(24px, 600, v.$black, 1.5);
+                letter-spacing: -0.03em;
+            }
+        }
+    }
+
+    &__arrows {
+        @include m.d-flex(start, center, nowrap, row, 25px);
+        @include m.position(absolute, 1, -1, right, bottom, 5px, -70px);
+
+        &-arrow {
+            background-color: v.$white;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            transition: all .33s;
+
+            &--right {
+                rotate: 180deg;
+
+
+                & svg {
+                    translate: 12px 14px;
+                }
+            }
+
+            &--left {
+
+
+                & svg {
+                    translate: 13px 17px;
+                }
+
+            }
+
+            & path {
+                fill: v.$black;
+            }
+
+            &:hover {
+                scale: 1.25;
+                background-color: v.$black;
+                cursor: pointer;
+
+                & path {
+                    fill: v.$white;
+                }
+            }
+        }
+    }
+
+    &__lines {
+        @include m.d-flex(center, start, nowrap, row, 15px);
+
+
+
+        &-line {
+            display: block;
+            border: 4px solid v.$grey;
+            width: 32px;
+
+            &--3 {
+                border: 4px solid v.$primary;
+            }
+        }
+    }
+}

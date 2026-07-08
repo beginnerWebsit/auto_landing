@@ -1,0 +1,38 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.blog {
+    padding: 135px 0;
+
+    &__title {
+        @include m.font(58px, 800, v.$black, 1.31);
+        margin: 0 0 47px 0;
+    }
+
+    &__categories {
+        @include m.d-flex(start, start, nowrap, row, 30px);
+        @include m.font(32px, 700, v.$black, 1.5);
+        margin: 0 0 46px 0;
+    }
+
+    &__list {
+        @include m.d-grid(repeat(2, 1fr) / repeat(3, 1fr), 32px, 63px);
+
+        &-item {
+            & span {
+                @include m.font(16px, 600, v.$grey, 1.75);
+                display: block;
+                margin: 24px 0 16px 0;
+            }
+
+            &-title {
+                @include m.font(32px, 700, v.$black, 1.5);
+                margin: 0 0 16px 0;
+            }
+
+            &-desc {
+                @include m.font(16px, 600, v.$black, 1.75);
+            }
+        }
+    }
+}

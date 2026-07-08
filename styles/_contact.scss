@@ -30,7 +30,6 @@
         @include m.d-flex(center, start, nowrap, column, 0, 50px);
         background: v.$primary;
         width: 730px;
-        max-height: 502px;
         height: 100%;
 
         &-title {
