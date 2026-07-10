@@ -1,0 +1,66 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.questions {
+    background-color: v.$steelgrey;
+    padding: 128px 0;
+
+    &__inner {
+        @include m.d-flex(start, center, nowrap, column, 0, 86px);
+
+        &-title {
+            @include m.font(58px, 800, v.$black, 1.31);
+            letter-spacing: -0.03em;
+        }
+
+        &-list {
+            @include m.d-flex(start, start, nowrap, column, 0, 12px);
+
+            &-item {
+                width: 900px;
+                background-color: v.$white;
+                padding: 40px;
+                position: relative;
+
+                &-title {
+                    @include m.font(24px, 600, v.$black, 1.5);
+                    letter-spacing: -0.03em;
+
+                    &--margin {
+                        margin: 0 0 16px 0;
+                    }
+                }
+
+                &-desc {
+                    @include m.font(18px, 600, v.$grey, 1.75);
+                    max-width: 700px;
+                }
+
+                &-btn {
+                    @include m.position(absolute, 1, -1, top, right, 32px, 40px);
+                    width: 51px;
+                    height: 48px;
+                    background-color: v.$primary;
+                    @include m.d-flex(center, center);
+                    transition: all .33s;
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: .7;
+                    }
+
+                    & svg {
+                        width: 17px;
+                        height: 17px;
+                    }
+
+                    &--minus {
+                        & svg {
+                            height: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
