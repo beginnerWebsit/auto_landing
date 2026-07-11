@@ -1,0 +1,68 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.form {
+    padding: 121px 0 522px 0;
+
+    &__title {
+        @include m.font(64px, 800, v.$black, 1.31);
+        letter-spacing: -0.03em;
+        max-width: 450px;
+        margin: 0 0 48px 0;
+    }
+
+    &__wrapper {
+        @include m.d-flex(space-between, start, nowrap, row, 15px);
+        position: relative;
+
+
+        &-form {
+            @include m.d-flex(start, start, nowrap, column, 0, 4px);
+
+            &-input {
+                width: 625px;
+                height: 72px;
+                background-color: v.$light-grey;
+                border: none;
+                outline: none;
+                border-radius: 2px;
+                @include m.font(16px, 600, v.$black, 1.75);
+
+                &::placeholder {
+                    @include m.font(16px, 600, v.$black, 1.75);
+                }
+            }
+
+            &-submitbtn {
+                margin: 48px 0 0 0;
+                white-space: nowrap;
+            }
+        }
+
+        &-info {
+            @include m.d-flex(start, start, nowrap, column, 0, 32px);
+
+            & span {
+                @include m.font(16px, 600, v.$black, 1.75);
+                opacity: .7;
+            }
+
+            &-item {
+                @include m.font(24px, 600, v.$black, 1.5);
+                letter-spacing: -0.03em;
+            }
+        }
+    }
+
+    &__imagebox {
+        position: absolute;
+        top: 590px;
+        left: 0;
+        right: 0;
+        max-width: 1280px;
+
+        & img {
+            width: 100%;
+        }
+    }
+}

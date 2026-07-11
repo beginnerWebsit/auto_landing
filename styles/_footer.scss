@@ -1,0 +1,102 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.footer {
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto -3px auto;
+    }
+
+    &__content {
+        &-top {
+            padding: 128px 0;
+            background-color: rgba($color: v.$black, $alpha: 0.98);
+
+            &-wrapper {
+                @include m.d-flex(space-between, start, nowrap, row, 15px);
+            }
+
+            &-left-title {
+                @include m.font(48px, 700, v.$white, 1.4);
+                letter-spacing: -0.03em;
+                max-width: 460px;
+                margin: 0 0 64px 0;
+            }
+
+            .socials {
+                @include m.d-flex(start, start, nowrap, row, 25px);
+
+                &__item {
+                    transition: .33s;
+
+                    & svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    &:hover {
+                        opacity: .5;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &-right {
+                @include m.d-flex(start, start, nowrap, column, 0, 32px);
+
+                &-item {
+                    @include m.d-flex(start, start, nowrap, column, 0, 8px);
+                    @include m.font(24px, 600, v.$white, 1.5);
+                    letter-spacing: -0.03em;
+
+                    & span {
+                        @include m.font(18px, 600, v.$white, 1.75);
+                        opacity: .6;
+                    }
+                }
+            }
+
+        }
+
+        &-bottom {
+            background-color: v.$black;
+            padding: 65px 0;
+
+            &-wrapper {
+                @include m.d-flex(space-between, center);
+
+            }
+
+            &-content {
+                @include m.d-flex(start, center, nowrap, row, 206px);
+
+                .nav {
+                    @include m.d-flex(start, start, nowrap, row);
+
+                    &__list {
+                        @include m.d-flex(start, start, nowrap, row, 40px);
+
+                        &-item {
+                            @include m.font(16px, 600, v.$white, 1.75);
+                            transition: .33s;
+
+                            &:hover {
+                                opacity: .7;
+                                cursor: pointer;
+                            }
+
+                        }
+                    }
+                }
+
+                &-qwe {
+                    @include m.font(16px, 600, v.$grey, 1.75);
+                }
+            }
+
+
+        }
+    }
+}
