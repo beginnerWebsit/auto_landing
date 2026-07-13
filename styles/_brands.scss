@@ -13,14 +13,27 @@
 
     &__list {
         @include m.d-grid(repeat(2, 1fr) / repeat(5, 1fr), 0, 38px);
-        
+
         &-item {
             max-width: 220px;
             transition: .33s;
 
+            & svg {
+                max-width: 225px;
+                display: block;
+            }
+
             &:hover {
                 opacity: .6;
                 cursor: pointer;
+            }
+        }
+
+        @media (max-width: v.$media_14) {
+            @include m.d-grid(repeat(5, 1fr) / repeat(2, 1fr), 0, 0);
+
+            &-item {
+                margin: 0 auto;
             }
         }
     }

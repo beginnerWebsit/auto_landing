@@ -17,4 +17,10 @@
             }
         }
     }
+
+    @media (max-width: v.$media_11) {
+        &__stats {
+            @include m.d-flex(center, start, nowrap, row, 100px);
+        }
+    }
 }

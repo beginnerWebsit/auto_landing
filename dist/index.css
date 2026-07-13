@@ -306,7 +306,7 @@ button {
 .hero__inner .hero__info-left {
   position: absolute;
   z-index: 1;
-  top: 72px;
+  top: 90px;
   left: -39px;
   width: 281px;
   height: 102px;
@@ -328,8 +328,8 @@ button {
 .hero__inner .hero__info-right {
   position: absolute;
   z-index: 1;
-  bottom: 72px;
-  right: -39px;
+  bottom: 90px;
+  right: 0px;
   width: 326px;
   height: 102px;
   display: flex;
@@ -346,6 +346,33 @@ button {
   background: url("../assets/icons/stars.svg");
   width: 185px;
   height: 36px;
+}
+@media (max-width: 1100px) {
+  .hero__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .hero .hero__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 50px;
+    max-width: 800px;
+  }
+  .hero .hero__content-title {
+    text-align: center;
+  }
+  .hero .hero__img {
+    display: none;
+  }
 }
 
 .offer {
@@ -440,6 +467,18 @@ button {
 .offer__about:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+@media (max-width: 1400px) {
+  .offer__list {
+    display: grid;
+    grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+  .offer__list-item {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .process {
@@ -602,6 +641,29 @@ button {
   height: 64px;
   margin: 0 0 0 60px;
 }
+@media (max-width: 1100px) {
+  .contact__content {
+    width: 500px;
+  }
+  .contact__content-title {
+    font-size: 32px;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+    line-height: 1.4;
+    max-width: 400px;
+  }
+  .contact__content-button {
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
 
 .experience {
   padding: 50px 0;
@@ -637,6 +699,17 @@ button {
   line-height: 1.5;
   opacity: 0.7;
 }
+@media (max-width: 1100px) {
+  .experience__stats {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 100px;
+    row-gap: 0;
+  }
+}
 
 .brands {
   padding: 130px 0 80px 0;
@@ -661,9 +734,24 @@ button {
   max-width: 220px;
   transition: 0.33s;
 }
+.brands__list-item svg {
+  max-width: 225px;
+  display: block;
+}
 .brands__list-item:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+@media (max-width: 1400px) {
+  .brands__list {
+    display: grid;
+    grid-template: repeat(5, 1fr)/repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .brands__list-item {
+    margin: 0 auto;
+  }
 }
 
 .blog {
@@ -698,6 +786,9 @@ button {
   column-gap: 32px;
   row-gap: 63px;
 }
+.blog__list-item {
+  max-width: 405px;
+}
 .blog__list-item span {
   font-size: 16px;
   font-weight: 600;
@@ -721,6 +812,29 @@ button {
   font-style: normal;
   color: #1e1b1b;
   line-height: 1.75;
+}
+@media (max-width: 1400px) {
+  .blog__title {
+    text-align: center;
+  }
+  .blog__categories {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 30px;
+    row-gap: 0;
+  }
+  .blog__list {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 63px;
+  }
+  .blog__list-item {
+    margin: 0 auto;
+  }
 }
 
 .reviews {
@@ -845,6 +959,14 @@ button {
 }
 .reviews__lines-line--3 {
   border: 4px solid #ff6433;
+}
+@media (max-width: 1100px) {
+  .reviews__slider-slide {
+    margin: 0 auto;
+  }
+  .reviews__slider-slide--2 {
+    display: none;
+  }
 }
 
 .questions {
@@ -1022,6 +1144,11 @@ button {
 .form__imagebox img {
   width: 100%;
 }
+@media (max-width: 1100px) {
+  .form__wrapper-form-input {
+    width: 450px;
+  }
+}
 
 .footer__image {
   display: block;
@@ -1123,7 +1250,7 @@ button {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  column-gap: 206px;
+  column-gap: 8vw;
   row-gap: 0;
 }
 .footer__content-bottom-content .nav {

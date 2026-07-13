@@ -108,4 +108,14 @@
             }
         }
     }
+
+    @media (max-width: v.$media_11) {
+        &__slider-slide {
+            margin: 0 auto;
+
+            &--2 {
+                display: none;
+            }
+        }
+    }
 }

@@ -70,7 +70,7 @@
             }
 
             &-content {
-                @include m.d-flex(start, center, nowrap, row, 206px);
+                @include m.d-flex(start, center, nowrap, row, 8vw);
 
                 .nav {
                     @include m.d-flex(start, start, nowrap, row);
